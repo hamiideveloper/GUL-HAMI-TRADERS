@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Services | GUL-HAMI TRADERS - Hafizabad</title>
+<meta name="description" content="Windows Installation, MS Office, Drivers, Antivirus, System Setup & Software Solutions in Hafizabad. GUL-HAMI TRADERS - M. Gulraiz & Rana Muneeb">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --primary: #00e5ff;
+  --secondary: #0091ea;
+  --accent: #00c853;
+  --dark: #0b1120;
+  --darker: #060b16;
+  --card: #111b2e;
+  --card-hover: #162038;
+  --text: #e8f0fe;
+  --muted: #94a3b8;
+  --border: rgba(0, 229, 255, 0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--darker);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(6,11,22,0.96);
+  backdrop-filter: blur(16px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+}
+.nav-container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  color: #000;
+}
+.logo-text {
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+}
+.logo-text span { color: var(--primary); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-links > li { position: relative; }
+.nav-links > li > a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12.5px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.25s;
+  white-space: nowrap;
+}
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+  color: var(--primary);
+  background: rgba(0,229,255,0.08);
+}
+.dropdown-arrow { font-size: 9px; transition: 0.3s; }
+.dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 230px;
+  background: rgba(6,11,22,0.98);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  list-style: none;
+  display: none;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+  z-index: 1001;
+}
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.dropdown-menu a i { width: 18px; color: var(--primary); text-align: center; }
+.dropdown-menu a:hover {
+  background: rgba(0,229,255,0.12);
+  color: var(--primary);
+  transform: translateX(3px);
+}
+.whatsapp-group {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 7px 11px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 11.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37,211,102,0.3);
+}
+.whatsapp-btn.second {
+  background: linear-gradient(135deg, #128C7E, #075E54);
+}
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+  padding: 130px 0 45px;
+  background: linear-gradient(145deg, #060b16, #0c1a2e);
+  text-align: center;
+}
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #fff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.page-header p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ========== SERVICES ========== */
+.services-section {
+  padding: 40px 0 70px;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.section-title h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+.section-title p {
+  color: var(--muted);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 22px;
+}
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px 22px;
+  transition: 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(0,229,255,0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.service-card h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+.service-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+.service-list {
+  list-style: none;
+  margin-bottom: 16px;
+}
+.service-list li {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-list li i {
+  color: var(--primary);
+  font-size: 11px;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37,211,102,0.3);
+}
+
+/* ========== NOTE BOX ========== */
+.note-box {
+  background: rgba(0,229,255,0.08);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+.note-box h4 {
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.note-box p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ========== CTA BOX ========== */
+.cta-box {
+  background: linear-gradient(135deg, rgba(0,229,255,0.1), rgba(0,145,234,0.1));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+.cta-box h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.cta-box p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 11px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: 0.3s;
+}
+.btn-green {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+}
+.btn-green:hover { transform: translateY(-2px); }
+.btn-dark {
+  background: linear-gradient(135deg, #128C7E, #075E54);
+  color: #fff;
+}
+.btn-dark:hover { transform: translateY(-2px); }
+
+/* ========== FOOTER ========== */
+footer {
+  background: #040810;
+  padding: 45px 0 16px;
+  border-top: 1px solid var(--border);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #1a253a;
+  color: #475569;
+  font-size: 0.85rem;
+}
+.footer-bottom span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1100px) {
+  .nav-links { gap: 3px; }
+  .nav-links > li > a { font-size: 12px; padding: 6px 7px; }
+}
+@media (max-width: 992px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .whatsapp-group .whatsapp-btn { display: none; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #0b1120;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 15px 20px;
+    gap: 2px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  }
+  .nav-links.active { display: flex; }
+  .nav-links > li { width: 100%; }
+  .nav-links > li > a {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    display: none;
+    background: #0f1a2e;
+    border: 1px solid #1e2d45;
+    border-radius: 8px;
+    box-shadow: none;
+    margin: 2px 0 6px;
+    padding: 6px;
+  }
+  .dropdown.open .dropdown-menu { display: block; }
+  .dropdown:hover .dropdown-menu { display: none; }
+  .dropdown.open:hover .dropdown-menu { display: block; }
+  .page-header h1 { font-size: 1.9rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">GH</div>
+      <div class="logo-text">GUL-<span>HAMI</span> TRADERS</div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropdown-toggle">
+          <i class="fas fa-box-open"></i> Products <i class="fas fa-chevron-down dropdown-arrow"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="laptops.html"><i class="fas fa-laptop"></i> Laptops</a></li>
+          <li><a href="computers.html"><i class="fas fa-desktop"></i> Computers</a></li>
+          <li><a href="mobiles.html"><i class="fas fa-mobile-screen"></i> Mobiles</a></li>
+          <li><a href="tablets.html"><i class="fas fa-tablet-screen-button"></i> Tablets</a></li>
+          <li><a href="gaming.html"><i class="fas fa-gamepad"></i> Gaming</a></li>
+          <li><a href="printers.html"><i class="fas fa-print"></i> Printers</a></li>
+          <li><a href="projectors.html"><i class="fas fa-video"></i> Projectors</a></li>
+          <li><a href="cctv.html"><i class="fas fa-camera"></i> CCTV & Security</a></li>
+          <li><a href="storage.html"><i class="fas fa-hard-drive"></i> Storage</a></li>
+          <li><a href="ups.html"><i class="fas fa-bolt"></i> UPS & Power</a></li>
+          <li><a href="accessories.html"><i class="fas fa-keyboard"></i> Accessories</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropdown-toggle">
+          <i class="fas fa-microchip"></i> PC Parts <i class="fas fa-chevron-down dropdown-arrow"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="components.html"><i class="fas fa-microchip"></i> Components</a></li>
+          <li><a href="desktop-parts.html"><i class="fas fa-desktop"></i> Desktop Parts</a></li>
+          <li><a href="laptop-parts.html"><i class="fas fa-laptop"></i> Laptop Parts</a></li>
+          <li><a href="custom-pc-build.html"><i class="fas fa-screwdriver-wrench"></i> Custom PC Build</a></li>
+        </ul>
+      </li>
+
+      <li><a href="networking.html"><i class="fas fa-network-wired"></i> Networking</a></li>
+      <li><a href="software.html" class="active"><i class="fas fa-code"></i> Software</a></li>
+      <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+
+    <div class="whatsapp-group">
+      <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20GUL-HAMI%20TRADERS%20se%20rabta%20karna%20hai." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> 0341-6134865
+      </a>
+      <a href="https://wa.me/923285509644?text=Assalam%20o%20Alaikum%2C%20GUL-HAMI%20TRADERS%20se%20rabta%20karna%20hai." class="whatsapp-btn second" target="_blank">
+        <i class="fab fa-whatsapp"></i> 0328-5509644
+      </a>
+      <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<section class="page-header">
+  <div class="container">
+    <h1>Software Services</h1>
+    <p>Windows Installation • Drivers • MS Office • Antivirus • System Setup • Optimization & more in Hafizabad</p>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services-section">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Complete Software Solutions</h2>
+      <p>Laptop aur Computer ke liye almost har zaroori software service</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 1. Windows Installation -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fab fa-windows"></i></div>
+        <h3>Windows Installation</h3>
+        <p>Fresh Windows installation for laptop and desktop computers.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Windows 10 / 11 installation</li>
+          <li><i class="fas fa-check"></i> Clean format & setup</li>
+          <li><i class="fas fa-check"></i> Partition management</li>
+          <li><i class="fas fa-check"></i> Basic configuration</li>
+          <li><i class="fas fa-check"></i> Boot issues resolution</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Windows%20Installation%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 2. Drivers -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+        <h3>Drivers Installation</h3>
+        <p>All necessary drivers for smooth hardware functioning.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Chipset drivers</li>
+          <li><i class="fas fa-check"></i> Graphics drivers</li>
+          <li><i class="fas fa-check"></i> Audio / Sound drivers</li>
+          <li><i class="fas fa-check"></i> Network / Wi-Fi drivers</li>
+          <li><i class="fas fa-check"></i> Printer & other device drivers</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Drivers%20Installation%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 3. MS Office -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-file-word"></i></div>
+        <h3>MS Office Installation</h3>
+        <p>Microsoft Office setup for office and student use.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Word, Excel, PowerPoint</li>
+          <li><i class="fas fa-check"></i> Outlook setup</li>
+          <li><i class="fas fa-check"></i> Office activation guidance</li>
+          <li><i class="fas fa-check"></i> Basic configuration</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20MS%20Office%20Installation%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 4. Antivirus -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Antivirus & Security</h3>
+        <p>Protection against viruses, malware and threats.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Antivirus installation</li>
+          <li><i class="fas fa-check"></i> Malware removal</li>
+          <li><i class="fas fa-check"></i> System security checkup</li>
+          <li><i class="fas fa-check"></i> Basic firewall guidance</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Antivirus%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 5. System Optimization -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3>System Optimization</h3>
+        <p>Slow computer ko fast banane ke liye optimization.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Startup programs management</li>
+          <li><i class="fas fa-check"></i> Temporary files cleaning</li>
+          <li><i class="fas fa-check"></i> Performance tuning</li>
+          <li><i class="fas fa-check"></i> Disk cleanup & defrag</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20System%20Optimization%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 6. Data Backup -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-database"></i></div>
+        <h3>Data Backup & Transfer</h3>
+        <p>Important data ka backup aur transfer.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Full system backup</li>
+          <li><i class="fas fa-check"></i> File & folder backup</li>
+          <li><i class="fas fa-check"></i> Data transfer to new PC</li>
+          <li><i class="fas fa-check"></i> External drive setup</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Data%20Backup%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 7. Utility Software -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-toolbox"></i></div>
+        <h3>Utility Software</h3>
+        <p>Daily use tools for better system experience.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> PDF readers</li>
+          <li><i class="fas fa-check"></i> Compression tools (WinRAR/7-Zip)</li>
+          <li><i class="fas fa-check"></i> Media players</li>
+          <li><i class="fas fa-check"></i> Browser setup</li>
+          <li><i class="fas fa-check"></i> Basic utility tools</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Utility%20Software%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 8. Software Troubleshooting -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-bug"></i></div>
+        <h3>Software Troubleshooting</h3>
+        <p>Software related errors aur problems solve karna.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Application errors</li>
+          <li><i class="fas fa-check"></i> Software not opening issues</li>
+          <li><i class="fas fa-check"></i> Compatibility problems</li>
+          <li><i class="fas fa-check"></i> Update related issues</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Software%20Troubleshooting%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 9. Business Software -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Business Software Setup</h3>
+        <p>Small business ke liye basic software setup.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Accounting software guidance</li>
+          <li><i class="fas fa-check"></i> Inventory tools setup</li>
+          <li><i class="fas fa-check"></i> Office productivity tools</li>
+          <li><i class="fas fa-check"></i> Basic business configuration</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Business%20Software%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+      <!-- 10. Complete PC Setup -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Complete PC / Laptop Setup</h3>
+        <p>New ya format ke baad full system ready karna.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> Windows + Drivers</li>
+          <li><i class="fas fa-check"></i> Office + Antivirus</li>
+          <li><i class="fas fa-check"></i> Essential utilities</li>
+          <li><i class="fas fa-check"></i> User account setup</li>
+          <li><i class="fas fa-check"></i> Ready to use system</li>
+        </ul>
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20Complete%20PC%20Setup%20ke%20bare%20mein%20detail%20chahiye." class="cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact for Service
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Important Note -->
+    <div class="note-box">
+      <h4><i class="fas fa-info-circle"></i> Important Note</h4>
+      <p>
+        Hum <strong>legal aur authorized</strong> software installation aur setup recommend karte hain. 
+        Customer ko genuine / licensed software use karne ki salah di jati hai. 
+        Koi bhi pirated software promote nahi kiya jata.
+      </p>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="cta-box">
+      <h3>Need Any Software Service?</h3>
+      <p>Bataiye aapko kis qisam ki software service chahiye (Windows, Office, Drivers, Antivirus etc.). Hum guide karenge.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/923416134865?text=Assalam%20o%20Alaikum%2C%20mujhe%20Software%20Service%20chahiye.%20Detail%20bataiye." class="btn btn-green" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Gulraiz (0341-6134865)
+        </a>
+        <a href="https://wa.me/923285509644?text=Assalam%20o%20Alaikum%2C%20mujhe%20Software%20Service%20chahiye.%20Detail%20bataiye." class="btn btn-dark" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Muneeb (0328-5509644)
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo-text">GUL-<span style="color:var(--primary)">HAMI</span> TRADERS</div>
+        <p style="color:#64748b;margin:10px 0 12px;font-size:0.9rem;">
+          Complete Technology Solutions in Hafizabad, Punjab.
+        </p>
+        <p style="color:#94a3b8;font-size:0.88rem;">
+          Owners: <strong style="color:#fff;">M. Gulraiz & Rana Muneeb</strong>
+        </p>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin-bottom:12px;">Quick Links</h4>
+        <p><a href="index.html" style="color:#64748b;text-decoration:none;">Home</a></p>
+        <p><a href="services.html" style="color:#64748b;text-decoration:none;">Services</a></p>
+        <p><a href="contact.html" style="color:#64748b;text-decoration:none;">Contact</a></p>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin-bottom:12px;">Products</h4>
+        <p><a href="laptops.html" style="color:#64748b;text-decoration:none;">Laptops</a></p>
+        <p><a href="computers.html" style="color:#64748b;text-decoration:none;">Computers</a></p>
+        <p><a href="mobiles.html" style="color:#64748b;text-decoration:none;">Mobiles</a></p>
+        <p><a href="software.html" style="color:#64748b;text-decoration:none;">Software</a></p>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin-bottom:12px;">Contact</h4>
+        <p style="color:#64748b;">M. Gulraiz: 0341-6134865</p>
+        <p style="color:#64748b;">Rana Muneeb: 0328-5509644</p>
+        <p style="color:#64748b;">Hafizabad, Punjab</p>
+        <p style="color:#64748b;">gulhamitraders313@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 <span>GUL-HAMI TRADERS</span> — Owned by <span>M. Gulraiz & Rana Muneeb</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function() {
+  navLinks.classList.toggle('active');
+  const icon = menuToggle.querySelector('i');
+  if (navLinks.classList.contains('active')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-xmark');
+  } else {
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+  }
+});
+
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(function(dropdown) {
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  toggle.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      dropdowns.forEach(function(other) {
+        if (other !== dropdown) other.classList.remove('open');
+      });
+      dropdown.classList.toggle('open');
+    }
+  });
+});
+
+document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(function(link) {
+  link.addEventListener('click', function() {
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove('active');
+      dropdowns.forEach(d => d.classList.remove('open'));
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 768) {
+    navLinks.classList.remove('active');
+    dropdowns.forEach(d => d.classList.remove('open'));
+    const icon = menuToggle.querySelector('i');
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+  }
+});
+</script>
+
+</body>
+</html>
